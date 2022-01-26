@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>{% block title %}Home{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"/>
+    </head>
+    <body>
+        <header>
+            <section class="navbar">
+                <section class="grid-item">
+                    <section class="logo-container"><a href="{{ url_for('index') }}">LOGO</a></section>
+                </section>
+                <section class="grid-item">
+                    <section class="searchbar-container">Search: <input type="text" name="search-item" id="search-item" size="25" placeholder="item.."></section>
+                </section>
+                <section class="grid-item">
+                    <section class="login-logout"><button><a href="{{ url_for('login_page') }}">Login</a></button> | <button><a href="{{ url_for('sign_up_page') }}">Signup</a></button></section>
+                </section>
+            </section>
+        </header>
+        <section class="content-container">
+            {% block content %}
+            {% endblock %}
+        </section>
+        <script
+            type="text/javascript"
+            src="{{ url_for('static', filename='index.js') }}">
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+    <section class="homepage">
+        <section class="homepage-intro">
+            <img src="{{url_for('static', filename='stockshop.jfif')}}"/>
+        </section>
+
+        <section class="homepage-products">
+            <div class="populartext-container">
+                <h2>Popular Products</h2>
+            </div>
+        </section>
+
+        <section class="homepage-ending">
+            <p>ONE</p>
+        </section>
+    </section>
+{% endblock %}

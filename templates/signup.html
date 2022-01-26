@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Signup
+{% endblock %}
+
+{% block content %}
+    <section class="signup-container">
+        <form action="http://localhost:5000/login" method="POST">
+            <section class="form-container">
+                <section class="labels">
+                    <label for="name" class="label">Name</label>
+                    <label for="password" class="label">Password</label>
+                </section>
+                <section class="labels">
+                    <input type="text" name="name" class="enter"/>
+                    <input type="password" name="password" class="enter"/>
+                    <button type="submit">Register</button>
+                </section>
+            </section>
+        </form>
+
+
+
+    </section>
+{% endblock %}
